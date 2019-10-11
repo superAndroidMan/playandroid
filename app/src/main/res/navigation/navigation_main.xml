@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/homeFragment"
+    android:id="@+id/navigation_main">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.superman.app.playandroid.fragment.HomeFragment"
+        android:label="@string/menu_home">
+        <action android:id="@+id/action_homeFragment_to_centerFragment"
+            app:destination="@id/centerFragment"/>
+
+        <action android:id="@+id/action_homeFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment"/>
+
+<!--        <action android:id="@+id/action_navigationFragment_to_centerfragment"-->
+<!--            app:destination="@id/centerFragment"-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right"/>-->
+    </fragment>
+
+    <fragment android:id="@+id/centerFragment"
+        android:name="com.superman.app.playandroid.fragment.CenterFragment"
+        android:label="中心"
+        tools:layout="@layout/center_fragment_layout">
+
+        <action android:id="@+id/action_centerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+
+        <action android:id="@+id/action_centerFragment_to_userInfoFragment"
+            app:destination="@id/userInfoFragment"/>
+
+        <argument
+            android:name="link"
+            app:argType="string"/>
+        <argument android:name="title"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment android:id="@+id/userInfoFragment"
+        android:name="com.superman.app.playandroid.fragment.CenterFragment"
+        android:label="个人中心"
+        tools:layout="@layout/user_fragment_layout">
+
+        <action android:id="@+id/action_userInfoFragment_to_homeFragment"
+            app:destination="@id/homeFragment"/>
+
+        <action android:id="@+id/action_userInfoFragment_to_userInfoFragment"
+            app:destination="@id/centerFragment"/>
+
+        <argument
+            android:name="link"
+            app:argType="string"/>
+        <argument android:name="title"
+            app:argType="string"/>
+    </fragment>
+
+</navigation>

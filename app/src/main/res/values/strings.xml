@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="menu_home">首页</string>
+    <string name="menu_more">更多</string>
+    <string name="menu_paging">资料</string>
+    <string name="menu_lifecycle">生命周期</string>
+    <string name="menu_navigation">导航</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">工作台</string>
+    <string name="title_notifications">消息</string>
 </resources>
