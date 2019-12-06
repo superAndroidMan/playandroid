@@ -20,20 +20,18 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                 />
+                android:layout_height="?attr/actionBarSize" />
 
             <View
                 android:id="@+id/view_line"
                 style="@style/view_line"
                 android:visibility="gone" />
 
-            <com.superman.app.playandroid.widget.ViewPagerSlide
-                android:id="@+id/view_pager"
-                android:layout_width="match_parent"
+            <ViewFlipper
+                android:id="@+id/layout_container"
+                android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
-
         </LinearLayout>
 
     </LinearLayout>

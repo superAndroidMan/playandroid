@@ -20,7 +20,7 @@ class UserInfoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.home_fragment_layout, container, false)
+        return inflater.inflate(R.layout.useinfo_fragment_layout, container, false)
     }
 
 
